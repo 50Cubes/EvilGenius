@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@class JAViewController;
+@class JARootViewController;
 
 @interface JAAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) JAViewController *viewController;
+@property (strong, nonatomic) JARootViewController *viewController;
 
 @end

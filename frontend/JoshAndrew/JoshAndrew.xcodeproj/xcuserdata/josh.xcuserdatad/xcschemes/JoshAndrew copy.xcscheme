@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "037F1FAE1602BFB8003545E8"
-               BuildableName = "Player1.app"
-               BlueprintName = "Player1"
+               BlueprintIdentifier = "037F1FE31602E803003545E8"
+               BuildableName = "JoshAndrew copy.app"
+               BlueprintName = "Player2"
                ReferencedContainer = "container:JoshAndrew.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +32,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "037F1FAE1602BFB8003545E8"
-            BuildableName = "Player1.app"
-            BlueprintName = "Player1"
+            BlueprintIdentifier = "037F1FE31602E803003545E8"
+            BuildableName = "JoshAndrew copy.app"
+            BlueprintName = "Player2"
             ReferencedContainer = "container:JoshAndrew.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -51,9 +51,9 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "037F1FAE1602BFB8003545E8"
-            BuildableName = "Player1.app"
-            BlueprintName = "Player1"
+            BlueprintIdentifier = "037F1FE31602E803003545E8"
+            BuildableName = "JoshAndrew copy.app"
+            BlueprintName = "Player2"
             ReferencedContainer = "container:JoshAndrew.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -69,9 +69,9 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "037F1FAE1602BFB8003545E8"
-            BuildableName = "Player1.app"
-            BlueprintName = "Player1"
+            BlueprintIdentifier = "037F1FE31602E803003545E8"
+            BuildableName = "JoshAndrew copy.app"
+            BlueprintName = "Player2"
             ReferencedContainer = "container:JoshAndrew.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
