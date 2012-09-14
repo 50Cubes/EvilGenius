@@ -7,8 +7,7 @@
 //
 
 #import "JAAppDelegate.h"
-
-#import "JAViewController.h"
+#import "JARootViewController.h"
 
 @implementation JAAppDelegate
 
@@ -23,9 +22,10 @@
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
-    self.viewController = [[[JAViewController alloc] initWithNibName:@"JAViewController" bundle:nil] autorelease];
+    self.viewController = [[[JARootViewController alloc] initWithNibName:nil bundle:nil] autorelease];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+    [application setStatusBarHidden:YES withAnimation:UIStatusBarAnimationNone];
     return YES;
 }
 

@@ -13,12 +13,49 @@
 		037F1FBE1602BFB8003545E8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 037F1FBC1602BFB8003545E8 /* InfoPlist.strings */; };
 		037F1FC01602BFB8003545E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 037F1FBF1602BFB8003545E8 /* main.m */; };
 		037F1FC41602BFB8003545E8 /* JAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 037F1FC31602BFB8003545E8 /* JAAppDelegate.m */; };
-		037F1FC71602BFB8003545E8 /* JAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 037F1FC61602BFB8003545E8 /* JAViewController.m */; };
-		037F1FCA1602BFB8003545E8 /* JAViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 037F1FC81602BFB8003545E8 /* JAViewController.xib */; };
+		037F1FC71602BFB8003545E8 /* JAStartScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 037F1FC61602BFB8003545E8 /* JAStartScreen.m */; };
+		037F1FCA1602BFB8003545E8 /* JAStartScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 037F1FC81602BFB8003545E8 /* JAStartScreen.xib */; };
+		037F1FD61602C2FB003545E8 /* JARootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 037F1FD51602C2FB003545E8 /* JARootViewController.m */; };
+		037F1FE51602E803003545E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 037F1FBF1602BFB8003545E8 /* main.m */; };
+		037F1FE61602E803003545E8 /* JAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 037F1FC31602BFB8003545E8 /* JAAppDelegate.m */; };
+		037F1FE71602E803003545E8 /* JAStartScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 037F1FC61602BFB8003545E8 /* JAStartScreen.m */; };
+		037F1FE81602E803003545E8 /* JARootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 037F1FD51602C2FB003545E8 /* JARootViewController.m */; };
+		037F1FEA1602E803003545E8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 037F1FB31602BFB8003545E8 /* UIKit.framework */; };
+		037F1FEB1602E803003545E8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 037F1FB51602BFB8003545E8 /* Foundation.framework */; };
+		037F1FEC1602E803003545E8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 037F1FB71602BFB8003545E8 /* CoreGraphics.framework */; };
+		037F1FEE1602E803003545E8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 037F1FBC1602BFB8003545E8 /* InfoPlist.strings */; };
+		037F1FEF1602E803003545E8 /* JAStartScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 037F1FC81602BFB8003545E8 /* JAStartScreen.xib */; };
+		037F20121602EB71003545E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 037F1FBF1602BFB8003545E8 /* main.m */; };
+		037F20131602EB71003545E8 /* JAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 037F1FC31602BFB8003545E8 /* JAAppDelegate.m */; };
+		037F20141602EB71003545E8 /* JAStartScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 037F1FC61602BFB8003545E8 /* JAStartScreen.m */; };
+		037F20151602EB71003545E8 /* JARootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 037F1FD51602C2FB003545E8 /* JARootViewController.m */; };
+		037F20171602EB71003545E8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 037F1FB31602BFB8003545E8 /* UIKit.framework */; };
+		037F20181602EB71003545E8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 037F1FB51602BFB8003545E8 /* Foundation.framework */; };
+		037F20191602EB71003545E8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 037F1FB71602BFB8003545E8 /* CoreGraphics.framework */; };
+		037F201B1602EB71003545E8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 037F1FBC1602BFB8003545E8 /* InfoPlist.strings */; };
+		037F201C1602EB71003545E8 /* JAStartScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 037F1FC81602BFB8003545E8 /* JAStartScreen.xib */; };
+		037F20251602ED13003545E8 /* JAPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 037F20241602ED13003545E8 /* JAPlayer.m */; };
+		037F20261602ED13003545E8 /* JAPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 037F20241602ED13003545E8 /* JAPlayer.m */; };
+		037F20271602ED13003545E8 /* JAPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 037F20241602ED13003545E8 /* JAPlayer.m */; };
+		037F202B1602F977003545E8 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 037F202A1602F977003545E8 /* JSONKit.m */; };
+		037F202C1602F977003545E8 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 037F202A1602F977003545E8 /* JSONKit.m */; };
+		037F202D1602F977003545E8 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 037F202A1602F977003545E8 /* JSONKit.m */; };
+		037F20311603038D003545E8 /* JAJudgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 037F202F1603038D003545E8 /* JAJudgeViewController.m */; };
+		037F20321603038D003545E8 /* JAJudgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 037F202F1603038D003545E8 /* JAJudgeViewController.m */; };
+		037F20331603038D003545E8 /* JAJudgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 037F202F1603038D003545E8 /* JAJudgeViewController.m */; };
+		037F20341603038D003545E8 /* JAJudgeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 037F20301603038D003545E8 /* JAJudgeViewController.xib */; };
+		037F20351603038D003545E8 /* JAJudgeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 037F20301603038D003545E8 /* JAJudgeViewController.xib */; };
+		037F20361603038D003545E8 /* JAJudgeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 037F20301603038D003545E8 /* JAJudgeViewController.xib */; };
+		037F203A16030740003545E8 /* JAJudgeChoiceCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 037F203816030740003545E8 /* JAJudgeChoiceCardViewController.m */; };
+		037F203B16030740003545E8 /* JAJudgeChoiceCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 037F203816030740003545E8 /* JAJudgeChoiceCardViewController.m */; };
+		037F203C16030740003545E8 /* JAJudgeChoiceCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 037F203816030740003545E8 /* JAJudgeChoiceCardViewController.m */; };
+		037F203D16030740003545E8 /* JAJudgeChoiceCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 037F203916030740003545E8 /* JAJudgeChoiceCardViewController.xib */; };
+		037F203E16030740003545E8 /* JAJudgeChoiceCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 037F203916030740003545E8 /* JAJudgeChoiceCardViewController.xib */; };
+		037F203F16030740003545E8 /* JAJudgeChoiceCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 037F203916030740003545E8 /* JAJudgeChoiceCardViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		037F1FAF1602BFB8003545E8 /* JoshAndrew.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JoshAndrew.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		037F1FAF1602BFB8003545E8 /* Player1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Player1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		037F1FB31602BFB8003545E8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		037F1FB51602BFB8003545E8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		037F1FB71602BFB8003545E8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -28,9 +65,27 @@
 		037F1FC11602BFB8003545E8 /* JoshAndrew-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JoshAndrew-Prefix.pch"; sourceTree = "<group>"; };
 		037F1FC21602BFB8003545E8 /* JAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JAAppDelegate.h; sourceTree = "<group>"; };
 		037F1FC31602BFB8003545E8 /* JAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JAAppDelegate.m; sourceTree = "<group>"; };
-		037F1FC51602BFB8003545E8 /* JAViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JAViewController.h; sourceTree = "<group>"; };
-		037F1FC61602BFB8003545E8 /* JAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JAViewController.m; sourceTree = "<group>"; };
-		037F1FC91602BFB8003545E8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/JAViewController.xib; sourceTree = "<group>"; };
+		037F1FC51602BFB8003545E8 /* JAStartScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JAStartScreen.h; sourceTree = "<group>"; };
+		037F1FC61602BFB8003545E8 /* JAStartScreen.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JAStartScreen.m; sourceTree = "<group>"; };
+		037F1FC91602BFB8003545E8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/JAStartScreen.xib; sourceTree = "<group>"; };
+		037F1FD41602C2FB003545E8 /* JARootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JARootViewController.h; sourceTree = "<group>"; };
+		037F1FD51602C2FB003545E8 /* JARootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JARootViewController.m; sourceTree = "<group>"; };
+		037F1FD71602C5B7003545E8 /* GameConsts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameConsts.h; sourceTree = "<group>"; };
+		037F1FF31602E803003545E8 /* JoshAndrew copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JoshAndrew copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		037F1FF51602E803003545E8 /* JoshAndrew copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "JoshAndrew copy-Info.plist"; path = "/Users/josh/Desktop/joshAndrew/JoshAndrew/frontend/JoshAndrew/JoshAndrew copy-Info.plist"; sourceTree = "<absolute>"; };
+		037F20081602E820003545E8 /* JoshAndrew copy2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "JoshAndrew copy2-Info.plist"; path = "/Users/josh/Desktop/joshAndrew/JoshAndrew/frontend/JoshAndrew/JoshAndrew copy2-Info.plist"; sourceTree = "<absolute>"; };
+		037F20201602EB71003545E8 /* Player2 copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Player2 copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		037F20221602EB71003545E8 /* Player2 copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Player2 copy-Info.plist"; path = "/Users/josh/Desktop/joshAndrew/JoshAndrew/frontend/JoshAndrew/Player2 copy-Info.plist"; sourceTree = "<absolute>"; };
+		037F20231602ED13003545E8 /* JAPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAPlayer.h; sourceTree = "<group>"; };
+		037F20241602ED13003545E8 /* JAPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JAPlayer.m; sourceTree = "<group>"; };
+		037F20291602F977003545E8 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		037F202A1602F977003545E8 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		037F202E1603038D003545E8 /* JAJudgeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAJudgeViewController.h; sourceTree = "<group>"; };
+		037F202F1603038D003545E8 /* JAJudgeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JAJudgeViewController.m; sourceTree = "<group>"; };
+		037F20301603038D003545E8 /* JAJudgeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JAJudgeViewController.xib; sourceTree = "<group>"; };
+		037F203716030740003545E8 /* JAJudgeChoiceCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAJudgeChoiceCardViewController.h; sourceTree = "<group>"; };
+		037F203816030740003545E8 /* JAJudgeChoiceCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JAJudgeChoiceCardViewController.m; sourceTree = "<group>"; };
+		037F203916030740003545E8 /* JAJudgeChoiceCardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JAJudgeChoiceCardViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +99,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		037F1FE91602E803003545E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				037F1FEA1602E803003545E8 /* UIKit.framework in Frameworks */,
+				037F1FEB1602E803003545E8 /* Foundation.framework in Frameworks */,
+				037F1FEC1602E803003545E8 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		037F20161602EB71003545E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				037F20171602EB71003545E8 /* UIKit.framework in Frameworks */,
+				037F20181602EB71003545E8 /* Foundation.framework in Frameworks */,
+				037F20191602EB71003545E8 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -53,13 +128,16 @@
 				037F1FB91602BFB8003545E8 /* JoshAndrew */,
 				037F1FB21602BFB8003545E8 /* Frameworks */,
 				037F1FB01602BFB8003545E8 /* Products */,
+				037F20221602EB71003545E8 /* Player2 copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
 		037F1FB01602BFB8003545E8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				037F1FAF1602BFB8003545E8 /* JoshAndrew.app */,
+				037F1FAF1602BFB8003545E8 /* Player1.app */,
+				037F1FF31602E803003545E8 /* JoshAndrew copy.app */,
+				037F20201602EB71003545E8 /* Player2 copy.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -77,12 +155,24 @@
 		037F1FB91602BFB8003545E8 /* JoshAndrew */ = {
 			isa = PBXGroup;
 			children = (
+				037F203716030740003545E8 /* JAJudgeChoiceCardViewController.h */,
+				037F203816030740003545E8 /* JAJudgeChoiceCardViewController.m */,
+				037F203916030740003545E8 /* JAJudgeChoiceCardViewController.xib */,
+				037F20281602F977003545E8 /* JSONKit */,
+				037F1FD71602C5B7003545E8 /* GameConsts.h */,
 				037F1FC21602BFB8003545E8 /* JAAppDelegate.h */,
 				037F1FC31602BFB8003545E8 /* JAAppDelegate.m */,
-				037F1FC51602BFB8003545E8 /* JAViewController.h */,
-				037F1FC61602BFB8003545E8 /* JAViewController.m */,
-				037F1FC81602BFB8003545E8 /* JAViewController.xib */,
+				037F1FC51602BFB8003545E8 /* JAStartScreen.h */,
+				037F1FC61602BFB8003545E8 /* JAStartScreen.m */,
+				037F1FC81602BFB8003545E8 /* JAStartScreen.xib */,
+				037F1FD41602C2FB003545E8 /* JARootViewController.h */,
+				037F1FD51602C2FB003545E8 /* JARootViewController.m */,
 				037F1FBA1602BFB8003545E8 /* Supporting Files */,
+				037F20231602ED13003545E8 /* JAPlayer.h */,
+				037F20241602ED13003545E8 /* JAPlayer.m */,
+				037F202E1603038D003545E8 /* JAJudgeViewController.h */,
+				037F202F1603038D003545E8 /* JAJudgeViewController.m */,
+				037F20301603038D003545E8 /* JAJudgeViewController.xib */,
 			);
 			path = JoshAndrew;
 			sourceTree = "<group>";
@@ -91,6 +181,8 @@
 			isa = PBXGroup;
 			children = (
 				037F1FBB1602BFB8003545E8 /* JoshAndrew-Info.plist */,
+				037F1FF51602E803003545E8 /* JoshAndrew copy-Info.plist */,
+				037F20081602E820003545E8 /* JoshAndrew copy2-Info.plist */,
 				037F1FBC1602BFB8003545E8 /* InfoPlist.strings */,
 				037F1FBF1602BFB8003545E8 /* main.m */,
 				037F1FC11602BFB8003545E8 /* JoshAndrew-Prefix.pch */,
@@ -98,12 +190,21 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		037F20281602F977003545E8 /* JSONKit */ = {
+			isa = PBXGroup;
+			children = (
+				037F20291602F977003545E8 /* JSONKit.h */,
+				037F202A1602F977003545E8 /* JSONKit.m */,
+			);
+			path = JSONKit;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		037F1FAE1602BFB8003545E8 /* JoshAndrew */ = {
+		037F1FAE1602BFB8003545E8 /* Player1 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 037F1FCD1602BFB8003545E8 /* Build configuration list for PBXNativeTarget "JoshAndrew" */;
+			buildConfigurationList = 037F1FCD1602BFB8003545E8 /* Build configuration list for PBXNativeTarget "Player1" */;
 			buildPhases = (
 				037F1FAB1602BFB8003545E8 /* Sources */,
 				037F1FAC1602BFB8003545E8 /* Frameworks */,
@@ -113,9 +214,43 @@
 			);
 			dependencies = (
 			);
-			name = JoshAndrew;
+			name = Player1;
 			productName = JoshAndrew;
-			productReference = 037F1FAF1602BFB8003545E8 /* JoshAndrew.app */;
+			productReference = 037F1FAF1602BFB8003545E8 /* Player1.app */;
+			productType = "com.apple.product-type.application";
+		};
+		037F1FE31602E803003545E8 /* Player2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 037F1FF01602E803003545E8 /* Build configuration list for PBXNativeTarget "Player2" */;
+			buildPhases = (
+				037F1FE41602E803003545E8 /* Sources */,
+				037F1FE91602E803003545E8 /* Frameworks */,
+				037F1FED1602E803003545E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Player2;
+			productName = JoshAndrew;
+			productReference = 037F1FF31602E803003545E8 /* JoshAndrew copy.app */;
+			productType = "com.apple.product-type.application";
+		};
+		037F20101602EB71003545E8 /* Player2 copy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 037F201D1602EB71003545E8 /* Build configuration list for PBXNativeTarget "Player2 copy" */;
+			buildPhases = (
+				037F20111602EB71003545E8 /* Sources */,
+				037F20161602EB71003545E8 /* Frameworks */,
+				037F201A1602EB71003545E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Player2 copy";
+			productName = JoshAndrew;
+			productReference = 037F20201602EB71003545E8 /* Player2 copy.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -140,7 +275,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				037F1FAE1602BFB8003545E8 /* JoshAndrew */,
+				037F1FAE1602BFB8003545E8 /* Player1 */,
+				037F1FE31602E803003545E8 /* Player2 */,
+				037F20101602EB71003545E8 /* Player2 copy */,
 			);
 		};
 /* End PBXProject section */
@@ -151,7 +288,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				037F1FBE1602BFB8003545E8 /* InfoPlist.strings in Resources */,
-				037F1FCA1602BFB8003545E8 /* JAViewController.xib in Resources */,
+				037F1FCA1602BFB8003545E8 /* JAStartScreen.xib in Resources */,
+				037F20341603038D003545E8 /* JAJudgeViewController.xib in Resources */,
+				037F203D16030740003545E8 /* JAJudgeChoiceCardViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		037F1FED1602E803003545E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				037F1FEE1602E803003545E8 /* InfoPlist.strings in Resources */,
+				037F1FEF1602E803003545E8 /* JAStartScreen.xib in Resources */,
+				037F20351603038D003545E8 /* JAJudgeViewController.xib in Resources */,
+				037F203E16030740003545E8 /* JAJudgeChoiceCardViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		037F201A1602EB71003545E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				037F201B1602EB71003545E8 /* InfoPlist.strings in Resources */,
+				037F201C1602EB71003545E8 /* JAStartScreen.xib in Resources */,
+				037F20361603038D003545E8 /* JAJudgeViewController.xib in Resources */,
+				037F203F16030740003545E8 /* JAJudgeChoiceCardViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,7 +325,42 @@
 			files = (
 				037F1FC01602BFB8003545E8 /* main.m in Sources */,
 				037F1FC41602BFB8003545E8 /* JAAppDelegate.m in Sources */,
-				037F1FC71602BFB8003545E8 /* JAViewController.m in Sources */,
+				037F1FC71602BFB8003545E8 /* JAStartScreen.m in Sources */,
+				037F1FD61602C2FB003545E8 /* JARootViewController.m in Sources */,
+				037F20251602ED13003545E8 /* JAPlayer.m in Sources */,
+				037F202B1602F977003545E8 /* JSONKit.m in Sources */,
+				037F20311603038D003545E8 /* JAJudgeViewController.m in Sources */,
+				037F203A16030740003545E8 /* JAJudgeChoiceCardViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		037F1FE41602E803003545E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				037F1FE51602E803003545E8 /* main.m in Sources */,
+				037F1FE61602E803003545E8 /* JAAppDelegate.m in Sources */,
+				037F1FE71602E803003545E8 /* JAStartScreen.m in Sources */,
+				037F1FE81602E803003545E8 /* JARootViewController.m in Sources */,
+				037F20261602ED13003545E8 /* JAPlayer.m in Sources */,
+				037F202C1602F977003545E8 /* JSONKit.m in Sources */,
+				037F20321603038D003545E8 /* JAJudgeViewController.m in Sources */,
+				037F203B16030740003545E8 /* JAJudgeChoiceCardViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		037F20111602EB71003545E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				037F20121602EB71003545E8 /* main.m in Sources */,
+				037F20131602EB71003545E8 /* JAAppDelegate.m in Sources */,
+				037F20141602EB71003545E8 /* JAStartScreen.m in Sources */,
+				037F20151602EB71003545E8 /* JARootViewController.m in Sources */,
+				037F20271602ED13003545E8 /* JAPlayer.m in Sources */,
+				037F202D1602F977003545E8 /* JSONKit.m in Sources */,
+				037F20331603038D003545E8 /* JAJudgeViewController.m in Sources */,
+				037F203C16030740003545E8 /* JAJudgeChoiceCardViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,12 +375,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		037F1FC81602BFB8003545E8 /* JAViewController.xib */ = {
+		037F1FC81602BFB8003545E8 /* JAStartScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				037F1FC91602BFB8003545E8 /* en */,
 			);
-			name = JAViewController.xib;
+			name = JAStartScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -244,6 +440,10 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JoshAndrew/JoshAndrew-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"PLAYER=1",
+				);
 				INFOPLIST_FILE = "JoshAndrew/JoshAndrew-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -261,6 +461,58 @@
 			};
 			name = Release;
 		};
+		037F1FF11602E803003545E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JoshAndrew/JoshAndrew-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"PLAYER=2",
+				);
+				INFOPLIST_FILE = "JoshAndrew copy-Info.plist";
+				PRODUCT_NAME = "JoshAndrew copy";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		037F1FF21602E803003545E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JoshAndrew/JoshAndrew-Prefix.pch";
+				INFOPLIST_FILE = "JoshAndrew copy-Info.plist";
+				PRODUCT_NAME = "JoshAndrew copy";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		037F201E1602EB71003545E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JoshAndrew/JoshAndrew-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"PLAYER=3",
+				);
+				INFOPLIST_FILE = "Player2 copy-Info.plist";
+				PRODUCT_NAME = "Player2 copy";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		037F201F1602EB71003545E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JoshAndrew/JoshAndrew-Prefix.pch";
+				INFOPLIST_FILE = "Player2 copy-Info.plist";
+				PRODUCT_NAME = "Player2 copy";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -273,13 +525,32 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		037F1FCD1602BFB8003545E8 /* Build configuration list for PBXNativeTarget "JoshAndrew" */ = {
+		037F1FCD1602BFB8003545E8 /* Build configuration list for PBXNativeTarget "Player1" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				037F1FCE1602BFB8003545E8 /* Debug */,
 				037F1FCF1602BFB8003545E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		037F1FF01602E803003545E8 /* Build configuration list for PBXNativeTarget "Player2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				037F1FF11602E803003545E8 /* Debug */,
+				037F1FF21602E803003545E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		037F201D1602EB71003545E8 /* Build configuration list for PBXNativeTarget "Player2 copy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				037F201E1602EB71003545E8 /* Debug */,
+				037F201F1602EB71003545E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
