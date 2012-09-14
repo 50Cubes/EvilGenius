@@ -52,6 +52,18 @@
 		037F203D16030740003545E8 /* JAJudgeChoiceCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 037F203916030740003545E8 /* JAJudgeChoiceCardViewController.xib */; };
 		037F203E16030740003545E8 /* JAJudgeChoiceCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 037F203916030740003545E8 /* JAJudgeChoiceCardViewController.xib */; };
 		037F203F16030740003545E8 /* JAJudgeChoiceCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 037F203916030740003545E8 /* JAJudgeChoiceCardViewController.xib */; };
+		03957C1D1603ABA7005C0176 /* JAOratorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03957C1B1603ABA7005C0176 /* JAOratorViewController.m */; };
+		03957C1E1603ABA7005C0176 /* JAOratorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03957C1B1603ABA7005C0176 /* JAOratorViewController.m */; };
+		03957C1F1603ABA7005C0176 /* JAOratorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03957C1B1603ABA7005C0176 /* JAOratorViewController.m */; };
+		03957C201603ABA7005C0176 /* JAOratorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03957C1C1603ABA7005C0176 /* JAOratorViewController.xib */; };
+		03957C211603ABA7005C0176 /* JAOratorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03957C1C1603ABA7005C0176 /* JAOratorViewController.xib */; };
+		03957C221603ABA7005C0176 /* JAOratorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03957C1C1603ABA7005C0176 /* JAOratorViewController.xib */; };
+		03957C261603CFD2005C0176 /* JAOratorHandCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03957C241603CFD2005C0176 /* JAOratorHandCardViewController.m */; };
+		03957C271603CFD2005C0176 /* JAOratorHandCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03957C241603CFD2005C0176 /* JAOratorHandCardViewController.m */; };
+		03957C281603CFD2005C0176 /* JAOratorHandCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03957C241603CFD2005C0176 /* JAOratorHandCardViewController.m */; };
+		03957C291603CFD2005C0176 /* JAOratorHandCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03957C251603CFD2005C0176 /* JAOratorHandCardViewController.xib */; };
+		03957C2A1603CFD2005C0176 /* JAOratorHandCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03957C251603CFD2005C0176 /* JAOratorHandCardViewController.xib */; };
+		03957C2B1603CFD2005C0176 /* JAOratorHandCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03957C251603CFD2005C0176 /* JAOratorHandCardViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +98,12 @@
 		037F203716030740003545E8 /* JAJudgeChoiceCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAJudgeChoiceCardViewController.h; sourceTree = "<group>"; };
 		037F203816030740003545E8 /* JAJudgeChoiceCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JAJudgeChoiceCardViewController.m; sourceTree = "<group>"; };
 		037F203916030740003545E8 /* JAJudgeChoiceCardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JAJudgeChoiceCardViewController.xib; sourceTree = "<group>"; };
+		03957C1A1603ABA7005C0176 /* JAOratorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAOratorViewController.h; sourceTree = "<group>"; };
+		03957C1B1603ABA7005C0176 /* JAOratorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JAOratorViewController.m; sourceTree = "<group>"; };
+		03957C1C1603ABA7005C0176 /* JAOratorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JAOratorViewController.xib; sourceTree = "<group>"; };
+		03957C231603CFD2005C0176 /* JAOratorHandCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAOratorHandCardViewController.h; sourceTree = "<group>"; };
+		03957C241603CFD2005C0176 /* JAOratorHandCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JAOratorHandCardViewController.m; sourceTree = "<group>"; };
+		03957C251603CFD2005C0176 /* JAOratorHandCardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JAOratorHandCardViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,10 +173,15 @@
 		037F1FB91602BFB8003545E8 /* JoshAndrew */ = {
 			isa = PBXGroup;
 			children = (
+				03957C231603CFD2005C0176 /* JAOratorHandCardViewController.h */,
+				03957C241603CFD2005C0176 /* JAOratorHandCardViewController.m */,
+				03957C251603CFD2005C0176 /* JAOratorHandCardViewController.xib */,
+				03957C1A1603ABA7005C0176 /* JAOratorViewController.h */,
+				03957C1B1603ABA7005C0176 /* JAOratorViewController.m */,
+				03957C1C1603ABA7005C0176 /* JAOratorViewController.xib */,
 				037F203716030740003545E8 /* JAJudgeChoiceCardViewController.h */,
 				037F203816030740003545E8 /* JAJudgeChoiceCardViewController.m */,
 				037F203916030740003545E8 /* JAJudgeChoiceCardViewController.xib */,
-				037F20281602F977003545E8 /* JSONKit */,
 				037F1FD71602C5B7003545E8 /* GameConsts.h */,
 				037F1FC21602BFB8003545E8 /* JAAppDelegate.h */,
 				037F1FC31602BFB8003545E8 /* JAAppDelegate.m */,
@@ -167,12 +190,12 @@
 				037F1FC81602BFB8003545E8 /* JAStartScreen.xib */,
 				037F1FD41602C2FB003545E8 /* JARootViewController.h */,
 				037F1FD51602C2FB003545E8 /* JARootViewController.m */,
-				037F1FBA1602BFB8003545E8 /* Supporting Files */,
 				037F20231602ED13003545E8 /* JAPlayer.h */,
 				037F20241602ED13003545E8 /* JAPlayer.m */,
 				037F202E1603038D003545E8 /* JAJudgeViewController.h */,
 				037F202F1603038D003545E8 /* JAJudgeViewController.m */,
 				037F20301603038D003545E8 /* JAJudgeViewController.xib */,
+				037F20281602F977003545E8 /* JSONKit */,
 			);
 			path = JoshAndrew;
 			sourceTree = "<group>";
@@ -188,6 +211,7 @@
 				037F1FC11602BFB8003545E8 /* JoshAndrew-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			path = ..;
 			sourceTree = "<group>";
 		};
 		037F20281602F977003545E8 /* JSONKit */ = {
@@ -195,6 +219,7 @@
 			children = (
 				037F20291602F977003545E8 /* JSONKit.h */,
 				037F202A1602F977003545E8 /* JSONKit.m */,
+				037F1FBA1602BFB8003545E8 /* Supporting Files */,
 			);
 			path = JSONKit;
 			sourceTree = "<group>";
@@ -291,6 +316,8 @@
 				037F1FCA1602BFB8003545E8 /* JAStartScreen.xib in Resources */,
 				037F20341603038D003545E8 /* JAJudgeViewController.xib in Resources */,
 				037F203D16030740003545E8 /* JAJudgeChoiceCardViewController.xib in Resources */,
+				03957C201603ABA7005C0176 /* JAOratorViewController.xib in Resources */,
+				03957C291603CFD2005C0176 /* JAOratorHandCardViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +329,8 @@
 				037F1FEF1602E803003545E8 /* JAStartScreen.xib in Resources */,
 				037F20351603038D003545E8 /* JAJudgeViewController.xib in Resources */,
 				037F203E16030740003545E8 /* JAJudgeChoiceCardViewController.xib in Resources */,
+				03957C211603ABA7005C0176 /* JAOratorViewController.xib in Resources */,
+				03957C2A1603CFD2005C0176 /* JAOratorHandCardViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +342,8 @@
 				037F201C1602EB71003545E8 /* JAStartScreen.xib in Resources */,
 				037F20361603038D003545E8 /* JAJudgeViewController.xib in Resources */,
 				037F203F16030740003545E8 /* JAJudgeChoiceCardViewController.xib in Resources */,
+				03957C221603ABA7005C0176 /* JAOratorViewController.xib in Resources */,
+				03957C2B1603CFD2005C0176 /* JAOratorHandCardViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,6 +362,8 @@
 				037F202B1602F977003545E8 /* JSONKit.m in Sources */,
 				037F20311603038D003545E8 /* JAJudgeViewController.m in Sources */,
 				037F203A16030740003545E8 /* JAJudgeChoiceCardViewController.m in Sources */,
+				03957C1D1603ABA7005C0176 /* JAOratorViewController.m in Sources */,
+				03957C261603CFD2005C0176 /* JAOratorHandCardViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +379,8 @@
 				037F202C1602F977003545E8 /* JSONKit.m in Sources */,
 				037F20321603038D003545E8 /* JAJudgeViewController.m in Sources */,
 				037F203B16030740003545E8 /* JAJudgeChoiceCardViewController.m in Sources */,
+				03957C1E1603ABA7005C0176 /* JAOratorViewController.m in Sources */,
+				03957C271603CFD2005C0176 /* JAOratorHandCardViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,6 +396,8 @@
 				037F202D1602F977003545E8 /* JSONKit.m in Sources */,
 				037F20331603038D003545E8 /* JAJudgeViewController.m in Sources */,
 				037F203C16030740003545E8 /* JAJudgeChoiceCardViewController.m in Sources */,
+				03957C1F1603ABA7005C0176 /* JAOratorViewController.m in Sources */,
+				03957C281603CFD2005C0176 /* JAOratorHandCardViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

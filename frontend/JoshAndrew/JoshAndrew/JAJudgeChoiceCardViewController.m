@@ -13,13 +13,15 @@
 @end
 
 @implementation JAJudgeChoiceCardViewController
-@synthesize answerText;
+@synthesize answerText = _answerText;
+@synthesize waitingCover;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)init
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [super initWithNibName:@"JAJudgeChoiceCardViewController" bundle:nil];
     if (self) {
         // Custom initialization
+        _hasAnswered = NO;
     }
     return self;
 }
@@ -33,6 +35,7 @@
 - (void)viewDidUnload
 {
     [self setAnswerText:nil];
+    [self setWaitingCover:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -43,8 +46,10 @@
 	return YES;
 }
 
+
 - (void)dealloc {
-    [answerText release];
+    [_answerText release];
+    [waitingCover release];
     [super dealloc];
 }
 @end
