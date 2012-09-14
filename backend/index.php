@@ -70,8 +70,15 @@ switch ($_REQUEST['method'])
     
     if ($playType == "orator")
     {
-      $response['hand'] = array('The Trail of Tears', 'Passive-aggressive Post-it notes', 'Synergistic management solutions', 'The Dance of the Sugar Plum Fairy', 
-                  'An icepick lobotomy', 'Guys who don\'t call', 'Attitude', 'Breaking out into song and dance.', 'Dental dams', 'The Kool-Aid Man');
+      $res = $mysqli->query('select text from answers order by rand() limit 10');
+      $response['hand'] = array();
+      
+      for ($i = 0; $i < $res->num_rows; $i++)
+      {
+        $res->data_seek($i);
+        $row = $res->fetch_assoc();
+        $response['hand'][] = $row['text'];
+      }
     }
     
     $redis->lpush('match-players-'.$currentMatchId, 'userId-'.$userId.'-userName-'.$userName.'-role-'.$playType);
