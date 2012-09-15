@@ -7,12 +7,23 @@
 //
 
 #import <UIKit/UIKit.h>
+@class JAJudgeChoiceCardViewController;
+@protocol JAJudgeChoiceCardViewControllerDelegate <NSObject>
+
+-(void)didSelectCard:(JAJudgeChoiceCardViewController*)card;
+
+@end
 
 @interface JAJudgeChoiceCardViewController : UIViewController
-
-@property (nonatomic, assign) BOOL hasAnswered;
+{
+    
+    id<JAJudgeChoiceCardViewControllerDelegate> _delegate;
+}
+@property (retain, nonatomic) NSString *answerID;
+@property (retain, nonatomic) NSString *userID;
 @property (retain, nonatomic) IBOutlet UILabel *answerText;
 @property (retain, nonatomic) IBOutlet UIView *waitingCover;
-- (id)init;
+- (IBAction)didSelectCard:(id)sender;
+- (id)initWithDelegate:(id<JAJudgeChoiceCardViewControllerDelegate>)aDelegate;
 
 @end

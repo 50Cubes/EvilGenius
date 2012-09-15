@@ -16,12 +16,19 @@
 @synthesize answerText = _answerText;
 @synthesize waitingCover;
 
-- (id)init
+- (IBAction)didSelectCard:(id)sender
+{
+    
+    [_delegate didSelectCard:self];
+}
+
+- (id)initWithDelegate:(id<JAJudgeChoiceCardViewControllerDelegate>)aDelegate
 {
     self = [super initWithNibName:@"JAJudgeChoiceCardViewController" bundle:nil];
     if (self) {
         // Custom initialization
-        _hasAnswered = NO;
+        self.userID = nil;
+        _delegate = aDelegate;
     }
     return self;
 }
@@ -43,7 +50,7 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-	return YES;
+    return UIInterfaceOrientationIsLandscape(interfaceOrientation);
 }
 
 

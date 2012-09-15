@@ -15,14 +15,18 @@
 @implementation JAOratorHandCardViewController
 @synthesize answerText = _answerText;
 @synthesize score = _score;
+@synthesize cardID = _cardID;
+@synthesize cardText = _cardText;
 
-- (id)initWithData:(NSDictionary*)aData
+- (id)initWithData:(NSDictionary*)aData delegate:(id<JAOratorHandCardViewControllerDelegate>)theDelegate
 {
     self = [super initWithNibName:@"JAOratorHandCardViewController" bundle:[NSBundle mainBundle]];
     if (self)
     {
+        
         // Custom initialization
         _data = aData;
+        _delegate = theDelegate;
         _cardID = [_data objectForKey:@"id"];
         _cardText = [_data objectForKey:@"text"];
         _cardScore = [_data objectForKey:@"score"];
@@ -50,7 +54,7 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-	return YES;
+    return UIInterfaceOrientationIsLandscape(interfaceOrientation);
 }
 
 - (void)dealloc {
@@ -58,4 +62,12 @@
     [_score release];
     [super dealloc];
 }
+
+- (IBAction)cardDidSelect:(id)sender
+{
+    
+    [_delegate didSelectCard:self];
+}
+
+
 @end

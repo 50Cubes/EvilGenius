@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0310C518160431EC00334F29 /* JAAnonymousCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0310C516160431EC00334F29 /* JAAnonymousCardViewController.m */; };
+		0310C519160431EC00334F29 /* JAAnonymousCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0310C516160431EC00334F29 /* JAAnonymousCardViewController.m */; };
+		0310C51A160431EC00334F29 /* JAAnonymousCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0310C516160431EC00334F29 /* JAAnonymousCardViewController.m */; };
+		0310C51B160431EC00334F29 /* JAAnonymousCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0310C517160431EC00334F29 /* JAAnonymousCardViewController.xib */; };
+		0310C51C160431EC00334F29 /* JAAnonymousCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0310C517160431EC00334F29 /* JAAnonymousCardViewController.xib */; };
+		0310C51D160431EC00334F29 /* JAAnonymousCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0310C517160431EC00334F29 /* JAAnonymousCardViewController.xib */; };
 		037F1FB41602BFB8003545E8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 037F1FB31602BFB8003545E8 /* UIKit.framework */; };
 		037F1FB61602BFB8003545E8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 037F1FB51602BFB8003545E8 /* Foundation.framework */; };
 		037F1FB81602BFB8003545E8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 037F1FB71602BFB8003545E8 /* CoreGraphics.framework */; };
@@ -64,9 +70,18 @@
 		03957C291603CFD2005C0176 /* JAOratorHandCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03957C251603CFD2005C0176 /* JAOratorHandCardViewController.xib */; };
 		03957C2A1603CFD2005C0176 /* JAOratorHandCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03957C251603CFD2005C0176 /* JAOratorHandCardViewController.xib */; };
 		03957C2B1603CFD2005C0176 /* JAOratorHandCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03957C251603CFD2005C0176 /* JAOratorHandCardViewController.xib */; };
+		03957C331604222A005C0176 /* JAResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03957C311604222A005C0176 /* JAResultsViewController.m */; };
+		03957C341604222A005C0176 /* JAResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03957C311604222A005C0176 /* JAResultsViewController.m */; };
+		03957C351604222A005C0176 /* JAResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03957C311604222A005C0176 /* JAResultsViewController.m */; };
+		03957C361604222A005C0176 /* JAResultsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03957C321604222A005C0176 /* JAResultsViewController.xib */; };
+		03957C371604222A005C0176 /* JAResultsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03957C321604222A005C0176 /* JAResultsViewController.xib */; };
+		03957C381604222A005C0176 /* JAResultsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03957C321604222A005C0176 /* JAResultsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0310C515160431EC00334F29 /* JAAnonymousCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAAnonymousCardViewController.h; sourceTree = "<group>"; };
+		0310C516160431EC00334F29 /* JAAnonymousCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JAAnonymousCardViewController.m; sourceTree = "<group>"; };
+		0310C517160431EC00334F29 /* JAAnonymousCardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JAAnonymousCardViewController.xib; sourceTree = "<group>"; };
 		037F1FAF1602BFB8003545E8 /* Player1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Player1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		037F1FB31602BFB8003545E8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		037F1FB51602BFB8003545E8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -104,6 +119,9 @@
 		03957C231603CFD2005C0176 /* JAOratorHandCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAOratorHandCardViewController.h; sourceTree = "<group>"; };
 		03957C241603CFD2005C0176 /* JAOratorHandCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JAOratorHandCardViewController.m; sourceTree = "<group>"; };
 		03957C251603CFD2005C0176 /* JAOratorHandCardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JAOratorHandCardViewController.xib; sourceTree = "<group>"; };
+		03957C301604222A005C0176 /* JAResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAResultsViewController.h; sourceTree = "<group>"; };
+		03957C311604222A005C0176 /* JAResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JAResultsViewController.m; sourceTree = "<group>"; };
+		03957C321604222A005C0176 /* JAResultsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JAResultsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,13 +158,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0310C514160431CB00334F29 /* anonymousCard */ = {
+			isa = PBXGroup;
+			children = (
+				0310C515160431EC00334F29 /* JAAnonymousCardViewController.h */,
+				0310C516160431EC00334F29 /* JAAnonymousCardViewController.m */,
+				0310C517160431EC00334F29 /* JAAnonymousCardViewController.xib */,
+			);
+			name = anonymousCard;
+			sourceTree = "<group>";
+		};
 		037F1FA41602BFB8003545E8 = {
 			isa = PBXGroup;
 			children = (
 				037F1FB91602BFB8003545E8 /* JoshAndrew */,
 				037F1FB21602BFB8003545E8 /* Frameworks */,
 				037F1FB01602BFB8003545E8 /* Products */,
-				037F20221602EB71003545E8 /* Player2 copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -173,28 +200,11 @@
 		037F1FB91602BFB8003545E8 /* JoshAndrew */ = {
 			isa = PBXGroup;
 			children = (
-				03957C231603CFD2005C0176 /* JAOratorHandCardViewController.h */,
-				03957C241603CFD2005C0176 /* JAOratorHandCardViewController.m */,
-				03957C251603CFD2005C0176 /* JAOratorHandCardViewController.xib */,
-				03957C1A1603ABA7005C0176 /* JAOratorViewController.h */,
-				03957C1B1603ABA7005C0176 /* JAOratorViewController.m */,
-				03957C1C1603ABA7005C0176 /* JAOratorViewController.xib */,
-				037F203716030740003545E8 /* JAJudgeChoiceCardViewController.h */,
-				037F203816030740003545E8 /* JAJudgeChoiceCardViewController.m */,
-				037F203916030740003545E8 /* JAJudgeChoiceCardViewController.xib */,
-				037F1FD71602C5B7003545E8 /* GameConsts.h */,
-				037F1FC21602BFB8003545E8 /* JAAppDelegate.h */,
-				037F1FC31602BFB8003545E8 /* JAAppDelegate.m */,
-				037F1FC51602BFB8003545E8 /* JAStartScreen.h */,
-				037F1FC61602BFB8003545E8 /* JAStartScreen.m */,
-				037F1FC81602BFB8003545E8 /* JAStartScreen.xib */,
-				037F1FD41602C2FB003545E8 /* JARootViewController.h */,
-				037F1FD51602C2FB003545E8 /* JARootViewController.m */,
-				037F20231602ED13003545E8 /* JAPlayer.h */,
-				037F20241602ED13003545E8 /* JAPlayer.m */,
-				037F202E1603038D003545E8 /* JAJudgeViewController.h */,
-				037F202F1603038D003545E8 /* JAJudgeViewController.m */,
-				037F20301603038D003545E8 /* JAJudgeViewController.xib */,
+				03957C47160422ED005C0176 /* model */,
+				03957C44160422AB005C0176 /* playState */,
+				03957C4316042287005C0176 /* init */,
+				03957C4216042274005C0176 /* results */,
+				037F1FBA1602BFB8003545E8 /* Supporting Files */,
 				037F20281602F977003545E8 /* JSONKit */,
 			);
 			path = JoshAndrew;
@@ -203,6 +213,7 @@
 		037F1FBA1602BFB8003545E8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				037F20221602EB71003545E8 /* Player2 copy-Info.plist */,
 				037F1FBB1602BFB8003545E8 /* JoshAndrew-Info.plist */,
 				037F1FF51602E803003545E8 /* JoshAndrew copy-Info.plist */,
 				037F20081602E820003545E8 /* JoshAndrew copy2-Info.plist */,
@@ -211,7 +222,6 @@
 				037F1FC11602BFB8003545E8 /* JoshAndrew-Prefix.pch */,
 			);
 			name = "Supporting Files";
-			path = ..;
 			sourceTree = "<group>";
 		};
 		037F20281602F977003545E8 /* JSONKit */ = {
@@ -219,9 +229,78 @@
 			children = (
 				037F20291602F977003545E8 /* JSONKit.h */,
 				037F202A1602F977003545E8 /* JSONKit.m */,
-				037F1FBA1602BFB8003545E8 /* Supporting Files */,
 			);
 			path = JSONKit;
+			sourceTree = "<group>";
+		};
+		03957C4216042274005C0176 /* results */ = {
+			isa = PBXGroup;
+			children = (
+				03957C301604222A005C0176 /* JAResultsViewController.h */,
+				03957C311604222A005C0176 /* JAResultsViewController.m */,
+				03957C321604222A005C0176 /* JAResultsViewController.xib */,
+			);
+			name = results;
+			sourceTree = "<group>";
+		};
+		03957C4316042287005C0176 /* init */ = {
+			isa = PBXGroup;
+			children = (
+				037F1FC21602BFB8003545E8 /* JAAppDelegate.h */,
+				037F1FC31602BFB8003545E8 /* JAAppDelegate.m */,
+				037F1FC51602BFB8003545E8 /* JAStartScreen.h */,
+				037F1FC61602BFB8003545E8 /* JAStartScreen.m */,
+				037F1FC81602BFB8003545E8 /* JAStartScreen.xib */,
+				037F1FD41602C2FB003545E8 /* JARootViewController.h */,
+				037F1FD51602C2FB003545E8 /* JARootViewController.m */,
+			);
+			name = init;
+			sourceTree = "<group>";
+		};
+		03957C44160422AB005C0176 /* playState */ = {
+			isa = PBXGroup;
+			children = (
+				0310C514160431CB00334F29 /* anonymousCard */,
+				03957C46160422D1005C0176 /* orator */,
+				03957C45160422C5005C0176 /* judge */,
+			);
+			name = playState;
+			sourceTree = "<group>";
+		};
+		03957C45160422C5005C0176 /* judge */ = {
+			isa = PBXGroup;
+			children = (
+				037F202E1603038D003545E8 /* JAJudgeViewController.h */,
+				037F202F1603038D003545E8 /* JAJudgeViewController.m */,
+				037F20301603038D003545E8 /* JAJudgeViewController.xib */,
+				037F203716030740003545E8 /* JAJudgeChoiceCardViewController.h */,
+				037F203816030740003545E8 /* JAJudgeChoiceCardViewController.m */,
+				037F203916030740003545E8 /* JAJudgeChoiceCardViewController.xib */,
+			);
+			name = judge;
+			sourceTree = "<group>";
+		};
+		03957C46160422D1005C0176 /* orator */ = {
+			isa = PBXGroup;
+			children = (
+				03957C231603CFD2005C0176 /* JAOratorHandCardViewController.h */,
+				03957C241603CFD2005C0176 /* JAOratorHandCardViewController.m */,
+				03957C251603CFD2005C0176 /* JAOratorHandCardViewController.xib */,
+				03957C1A1603ABA7005C0176 /* JAOratorViewController.h */,
+				03957C1B1603ABA7005C0176 /* JAOratorViewController.m */,
+				03957C1C1603ABA7005C0176 /* JAOratorViewController.xib */,
+			);
+			name = orator;
+			sourceTree = "<group>";
+		};
+		03957C47160422ED005C0176 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				037F1FD71602C5B7003545E8 /* GameConsts.h */,
+				037F20231602ED13003545E8 /* JAPlayer.h */,
+				037F20241602ED13003545E8 /* JAPlayer.m */,
+			);
+			name = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,6 +397,8 @@
 				037F203D16030740003545E8 /* JAJudgeChoiceCardViewController.xib in Resources */,
 				03957C201603ABA7005C0176 /* JAOratorViewController.xib in Resources */,
 				03957C291603CFD2005C0176 /* JAOratorHandCardViewController.xib in Resources */,
+				03957C361604222A005C0176 /* JAResultsViewController.xib in Resources */,
+				0310C51B160431EC00334F29 /* JAAnonymousCardViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,6 +412,8 @@
 				037F203E16030740003545E8 /* JAJudgeChoiceCardViewController.xib in Resources */,
 				03957C211603ABA7005C0176 /* JAOratorViewController.xib in Resources */,
 				03957C2A1603CFD2005C0176 /* JAOratorHandCardViewController.xib in Resources */,
+				03957C371604222A005C0176 /* JAResultsViewController.xib in Resources */,
+				0310C51C160431EC00334F29 /* JAAnonymousCardViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +427,8 @@
 				037F203F16030740003545E8 /* JAJudgeChoiceCardViewController.xib in Resources */,
 				03957C221603ABA7005C0176 /* JAOratorViewController.xib in Resources */,
 				03957C2B1603CFD2005C0176 /* JAOratorHandCardViewController.xib in Resources */,
+				03957C381604222A005C0176 /* JAResultsViewController.xib in Resources */,
+				0310C51D160431EC00334F29 /* JAAnonymousCardViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,6 +449,8 @@
 				037F203A16030740003545E8 /* JAJudgeChoiceCardViewController.m in Sources */,
 				03957C1D1603ABA7005C0176 /* JAOratorViewController.m in Sources */,
 				03957C261603CFD2005C0176 /* JAOratorHandCardViewController.m in Sources */,
+				03957C331604222A005C0176 /* JAResultsViewController.m in Sources */,
+				0310C518160431EC00334F29 /* JAAnonymousCardViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +468,8 @@
 				037F203B16030740003545E8 /* JAJudgeChoiceCardViewController.m in Sources */,
 				03957C1E1603ABA7005C0176 /* JAOratorViewController.m in Sources */,
 				03957C271603CFD2005C0176 /* JAOratorHandCardViewController.m in Sources */,
+				03957C341604222A005C0176 /* JAResultsViewController.m in Sources */,
+				0310C519160431EC00334F29 /* JAAnonymousCardViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,6 +487,8 @@
 				037F203C16030740003545E8 /* JAJudgeChoiceCardViewController.m in Sources */,
 				03957C1F1603ABA7005C0176 /* JAOratorViewController.m in Sources */,
 				03957C281603CFD2005C0176 /* JAOratorHandCardViewController.m in Sources */,
+				03957C351604222A005C0176 /* JAResultsViewController.m in Sources */,
+				0310C51A160431EC00334F29 /* JAAnonymousCardViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,6 +592,8 @@
 		037F1FF11602E803003545E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jack Wu (27G8KUK9T6)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jack Wu (27G8KUK9T6)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JoshAndrew/JoshAndrew-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -509,6 +602,8 @@
 				);
 				INFOPLIST_FILE = "JoshAndrew copy-Info.plist";
 				PRODUCT_NAME = "JoshAndrew copy";
+				PROVISIONING_PROFILE = "C08E6CEE-201B-4283-947D-055213FEA103";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "C08E6CEE-201B-4283-947D-055213FEA103";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -527,6 +622,8 @@
 		037F201E1602EB71003545E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jack Wu (27G8KUK9T6)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jack Wu (27G8KUK9T6)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JoshAndrew/JoshAndrew-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -535,6 +632,8 @@
 				);
 				INFOPLIST_FILE = "Player2 copy-Info.plist";
 				PRODUCT_NAME = "Player2 copy";
+				PROVISIONING_PROFILE = "C08E6CEE-201B-4283-947D-055213FEA103";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "C08E6CEE-201B-4283-947D-055213FEA103";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;

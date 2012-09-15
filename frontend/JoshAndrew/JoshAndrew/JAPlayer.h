@@ -8,6 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+typedef enum
+{
+    JAPlayerTypeOrator = 1,
+    JAPlayerTypeJudge = 2
+    
+}JAPlayerType;
+
 @interface JAPlayer : NSObject
 {
 }
@@ -16,5 +23,11 @@
 
 @property (nonatomic, assign) NSInteger playerID;
 @property (nonatomic, assign) NSString *playerName;
+@property (nonatomic, assign) NSString *matchID;
+@property (nonatomic, assign) BOOL matchHasAllPlayers;
+@property (nonatomic, assign) JAPlayerType playerType;
+@property (nonatomic, retain) NSDictionary *matchData;
+@property (nonatomic, retain) NSString *matchAnswer;
+@property (nonatomic, retain) NSString *matchQuestion;
 
 @end

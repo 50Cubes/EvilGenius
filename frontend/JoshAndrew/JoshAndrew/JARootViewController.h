@@ -15,5 +15,7 @@ typedef void(^TransitionCompletion)(UIViewController *newVC);
 }
 
 -(void)dealHandWithDictionaryData:(NSDictionary*)data;
+-(void)showResultsScreenWithScore:(NSString*)playerScore winnerID:(NSString*)theWinnerID answerText:(NSString*)theAnswerText;
+-(void)showStartScreen;
 
 @end
