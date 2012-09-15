@@ -9,6 +9,8 @@
 #import "JARootViewController.h"
 #import "JAStartScreen.h" 
 #import "JAPlayer.h"
+#import "JAJudgeViewController.h"
+#import "JAOratorViewController.h"
 
 @interface JARootViewController ()
 
@@ -112,14 +114,18 @@
     {
         
         NSLog(@"hand is judge type");
-        
-        
+        JAJudgeViewController *judgeViewController = [[JAJudgeViewController alloc] initWithHandData:data];
+        [self transitionToView:judgeViewController withCompletionBlock:NULL];
+        [judgeViewController release];
     }
     else if ([[data objectForKey:@"play_type"] isEqual:@"orator"] )
     {
         
         NSLog(@"hand is orator type");
-
+        JAOratorViewController *oratorViewController = [[JAOratorViewController alloc] initWithData:data];
+        [self transitionToView:oratorViewController withCompletionBlock:NULL];
+        [oratorViewController release];
+    
     }
     else
     {

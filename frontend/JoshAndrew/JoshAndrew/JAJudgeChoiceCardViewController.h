@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface JAJudgeChoiceCardViewController : UIViewController
+
+@property (nonatomic, assign) BOOL hasAnswered;
 @property (retain, nonatomic) IBOutlet UILabel *answerText;
+@property (retain, nonatomic) IBOutlet UIView *waitingCover;
+- (id)init;
 
 @end
