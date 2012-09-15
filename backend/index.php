@@ -103,8 +103,7 @@ switch ($_REQUEST['method'])
   break;
   case 'AnswerAdlib':
     $userId = $_REQUEST['user_id'];
-    $answerId = $_REQUEST['answer_id'];
-    $answerText = $_REQUEST['answer_text'];
+    $chosenAnswerId = $_REQUEST['answer_id'];
     $matchId = $_REQUEST['match_id'];
     
     $numAnswers = $redis->llen('match-answers-'.$matchId);
@@ -117,11 +116,14 @@ switch ($_REQUEST['method'])
       foreach ($answers as $answer)
       {
         $answerInfo = explode('-', $answer);
-        $response['answers'][] = array('user_id' => $playerInfo[1], 'answer_id' => $playerInfo[3], 'answer_text' => $playerInfo[5]);
+        $answerId = $answerInfo[3];
+        $res = $mysqli->query('select text from answers where id = '.$answerId);
+        $row = $res->fetch_assoc();
+        $response['answers'][] = array('user_id' => $answerInfo[1], 'answer_id' => $answerInfo[3], 'answer_text' => $row['text']);
       }
     }
     
-    $redis->lpush('match-answers-'.$matchId, 'userId-'.$userId.'-answerId-'.$answerId.'-answerText-'.$answerText);
+    $redis->lpush('match-answers-'.$matchId, 'userId-'.$userId.'-answerId-'.$chosenAnswerId);
   break;
   case 'PingForAnswers':
     $matchId = $_REQUEST['match_id'];
@@ -136,20 +138,50 @@ switch ($_REQUEST['method'])
       foreach ($answers as $answer)
       {
         $answerInfo = explode('-', $answer);
-        $response['answers'][] = array('user_id' => $playerInfo[1], 'answer_id' => $playerInfo[3], 'answer_text' => $playerInfo[5]);
+        $answerId = $answerInfo[3];
+        $res = $mysqli->query('select text from answers where id = '.$answerId);
+        $row = $res->fetch_assoc();
+        $response['answers'][] = array('user_id' => $answerInfo[1], 'answer_id' => $answerInfo[3], 'answer_text' => $row['text']);
       }
     }
   break;
   case 'JudgeAnswers':
     $matchId = $_REQUEST['match_id'];
-    $answerId = $_REQUEST['answer_id'];
-    $answerText = $_REQUEST['answer_text'];
+    $chosenAnswerId = $_REQUEST['answer_id'];
+    $userId = $_REQUEST['user_id'];
     
-    $redis->set('match-judgment-'.$matchId, 'answerId-'.$answerId.'-answerText-'.$answerText);
+    $redis->set('match-judgment-'.$matchId, 'userId-'.$userId.'-answerId-'.$answerId);
+    
+    $answers = $redis->lrange('match-answers-'.$matchId, 0, -1);
+    
+    foreach ($answers as $answer)
+    {
+      $answerInfo = explode('-', $answer);
+      $answerUserId = $answerInfo[1];
+      $answerId = $answerInfo[3];
+      
+      if ($res = $mysqli->query('select score from answer where id = '.$answerId))
+      {
+        $row = $res->fetch_assoc();
+        $score = $row['score'];
+          
+        if (!$mysqli->query('update player set score=score'.($chosenAnswerId == $answerId ? '+' : '-').$score.' where user_id='.$answerUserId))
+        {
+          $mysqli->query('insert into player (user_id, score) values ('.$answerUserId.', '.(1000 + $score * ($chosenAnswerId == $answerId ? 1 : -1)).')');
+        }
+      }
+    }
+    
+    if (!$mysqli->query('update player set score=score+.1 where user_id='.$userId))
+    {
+      $mysqli->query('insert into player (user_id, score) values ('.$userId.', 1000.1)');
+    }
+    
     $response = array('ok' => 'yay!');
   break;
   case 'PingForJudgment':
     $matchId = $_REQUEST['match_id'];
+    $userId = $_REQUEST['user_id'];
     
     $judgment = $redis->get('match-judgment-'.$matchId);
     
@@ -157,7 +189,13 @@ switch ($_REQUEST['method'])
     {
       $response['ready'] = true;
       $judgmentInfo = explode('-', $judgment);
-      $response['judgment'] = array('answer_id' => $judgmentInfo[1], 'answer_text' => $judgmentInfo[3]);
+      $answerId = $playerInfo[3];
+      $res = $mysqli->query('select text from answers where id = '.$answerId);
+      $answerRow = $res->fetch_assoc();
+      
+      $res = $mysqli->query('select score from player where user_id='.$user_id);
+      $playerRow = $res->fetch_assoc();
+      $response['judgment'] = array('user_id' => $judgmentInfo[1], 'answer_id' => $judgmentInfo[3], 'answer_text' => $answerRow['text'], 'score' => $playerRow['score']);
     }
     else
     {
@@ -170,6 +208,7 @@ switch ($_REQUEST['method'])
     {
       if ($res->num_rows > 0)
       {
+        $row = $res->fetch_assoc();
         $response['score'] = $row['score'];
       }
       else
@@ -184,6 +223,7 @@ switch ($_REQUEST['method'])
   break;
 }
 
+$mysqli->close();
 echo json_encode($response);
 
 ?>
