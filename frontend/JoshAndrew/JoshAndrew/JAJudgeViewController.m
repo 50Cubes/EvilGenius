@@ -10,6 +10,8 @@
 #import "JAJudgeChoiceCardViewController.h"
 #import "JSONKit.h"
 #import "JAPlayer.h"
+#import "JAAnonymousCardViewController.h"
+#import "JARootViewController.h"
 
 @interface JAJudgeViewController ()
 -(void)updateWithOratorAnswer:(NSArray*)answer;
@@ -30,10 +32,13 @@
         // Custom initialization
         _data = [handData retain];
         _adLib = [_data objectForKey:@"adlib"];
+        _playerInfo = [[_data objectForKey:@"player_info"] retain];
         _cards = [[NSMutableArray alloc] init];
         _scrollerContent = [[UIView alloc] init];
         _checkForSubmittedCardsResponseData = [[NSMutableData alloc] init];
-        _submittedCards = [[NSMutableDictionary alloc] init];
+        _selectedCard = nil;
+        _allSubmissionsIn = NO;
+        _sendJudgementRequestData = [[NSMutableData alloc] init];
     }
     return self;
 }
@@ -46,7 +51,7 @@
     // Do any additional setup after loading the view from its nib.
     [_question setText:_adLib];
     NSArray *players = [_data objectForKey:@"player_info"];
-    [_scrollerContent setFrame:CGRectMake(0, 0, ([players count] - 1) * 250, _answerScroller.frame.size.height)];
+    [_scrollerContent setFrame:CGRectMake(0, 0, [players count] * 250, _answerScroller.frame.size.height)];
     
     NSInteger cardNum = 0;
     for ( NSDictionary *playerInfo in players )
@@ -55,7 +60,7 @@
         if ([[playerInfo objectForKey:@"play_type"] isEqual:@"orator"])
         {
             
-            JAJudgeChoiceCardViewController *cardUI = [[JAJudgeChoiceCardViewController alloc] init];
+            JAJudgeChoiceCardViewController *cardUI = [[JAJudgeChoiceCardViewController alloc] initWithDelegate:self];
             [cardUI.view setFrame:CGRectMake(cardNum * 250, 0, cardUI.view.frame.size.width, cardUI.view.frame.size.height)];
             [_cards addObject:cardUI];
             [_scrollerContent addSubview:cardUI.view];
@@ -97,7 +102,18 @@
 - (IBAction)sendChoiceDidTap:(id)sender
 {
     
+    // send choice
     
+    if (_selectedCard != nil)
+    {
+        
+        [JAPlayer sharedInstance].matchQuestion = _question.text;
+        [JAPlayer sharedInstance].matchAnswer = _selectedCard.answerText.text;
+        NSString *params = [NSString stringWithFormat:@"?method=JudgeSelect&match_id=%@&answer_id=%@&user_id=%d", [JAPlayer sharedInstance].matchID, _selectedCard.answerID, [JAPlayer sharedInstance].playerID];
+        NSURL *urlToGetSubmittedCards = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@", kBaseURL, params]];
+        NSURLRequest *checkForSubmittedCards = [NSURLRequest requestWithURL:urlToGetSubmittedCards];
+        _sendJudgementConnection = [[NSURLConnection connectionWithRequest:checkForSubmittedCards delegate:self] retain];
+    }
 }
 
 
@@ -115,6 +131,8 @@
 -(void)updateWithOratorAnswer:(NSArray*)currentAnswers
 {
     
+
+    
     for ( NSDictionary *answerData in currentAnswers )
     {
         
@@ -122,11 +140,35 @@
         NSLog( @"ansewrid : %@", [answerData objectForKey:@"answer_id"]);
         NSLog( @"ansewrText : %@", [answerData objectForKey:@"answer_text"]);
         NSLog( @"userID : %@", [answerData objectForKey:@"user_id"]);
-        if ( [_submittedCards objectForKey:[answerData objectForKey:@"user_id"]] == nil)
+        BOOL userHasPlayedACard = NO;
+        for ( JAJudgeChoiceCardViewController *card in _cards )
         {
             
+            if ( [card.userID isEqualToString:[answerData objectForKey:@"answer_id"]] )
+            {
+                
+                userHasPlayedACard = YES;
+                break;
+            }
+        }
+        
+        if ( !userHasPlayedACard )
+        {
             
-            
+            for ( JAJudgeChoiceCardViewController *card in _cards )
+            {
+                
+                if ( card.userID == nil)
+                {
+                    
+                    //update card with data
+                    card.userID = [answerData objectForKey:@"user_id"];
+                    [card.answerText setText:[answerData objectForKey:@"answer_text"]];
+                    card.answerID = [answerData objectForKey:@"answer_id"];
+                    [card.waitingCover setHidden:YES];
+                    break;
+                }
+            }
         }
     }
     
@@ -146,7 +188,12 @@
     {
         [_checkForSubmittedCardsResponseData setLength:0];
     }
+    else if ( connection == _sendJudgementConnection)
+    {
+        
+        [_sendJudgementRequestData setLength:0];
 
+    }
 }
 
 -(void) connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
@@ -157,7 +204,12 @@
         
         [_checkForSubmittedCardsResponseData appendData:data];
     }
+    else if ( connection == _sendJudgementConnection)
+    {
+        
+        [_sendJudgementRequestData appendData:data];
 
+    }
 }
 
 -(void) connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
@@ -169,7 +221,12 @@
         
         [_checkForSubmittedCardsResponseData release];
     }
+    else if ( connection == _sendJudgementConnection)
+    {
+        
+        [_sendJudgementRequestData release];
 
+    }
 }
 
 -(void) connectionDidFinishLoading:(NSURLConnection *)connection
@@ -185,7 +242,6 @@
             
             // update ui and check for more answers
             
-            [self updateWithOratorAnswer:[checkForSubmittedCardsResponseDictionary objectForKey:@"answers"]];
             NSLog(@"did not receive all answers");
             [self performSelector:@selector(pingServerToCheckForAnswers) withObject:nil afterDelay:5];
         }
@@ -194,10 +250,13 @@
             
             // judgement time is now
             [_submitChoiceButton setEnabled:YES];
-            
-            
+            [_submitChoiceButton setAlpha:1];
+            _allSubmissionsIn = YES;
             
         }
+
+        [self updateWithOratorAnswer:[checkForSubmittedCardsResponseDictionary objectForKey:@"answers"]];
+        
         // You've got all the data now
         // Do something with your response string
         NSLog( @"checkForSubmittedCardsResponseDictionary dictionary is : %@", checkForSubmittedCardsResponseDictionary );
@@ -206,8 +265,33 @@
         _checkForSubmittedCardsConnection = nil;
         [checkForSubmittedCardsResponseString release];
     }
-    
+    else if ( connection == _sendJudgementConnection)
+    {
+        
+        NSString *judgementResponseString = [[NSString alloc] initWithData:_sendJudgementRequestData encoding:NSUTF8StringEncoding];
+        //         NSLog( @"response string is : %@", responseString );
+        NSDictionary *judgementResponseDictionary = [judgementResponseString objectFromJSONString];
+        NSLog(@"jdugement response dictionary %@ ", judgementResponseDictionary);
+        
+        [((JARootViewController*)([UIApplication sharedApplication].keyWindow.rootViewController)) showResultsScreenWithScore:[judgementResponseDictionary objectForKey:@"score"] winnerID:_selectedCard.userID answerText:nil];
+    }
 }
 
+-(void)didSelectCard:(JAJudgeChoiceCardViewController*)card
+{
+    if (_allSubmissionsIn)
+    {
+        if ( _selectedCard != nil )
+        {
+            
+            [_selectedCard.view setBackgroundColor:[UIColor whiteColor]];
+            [_selectedCard release];
+            _selectedCard = nil;            
+        }
+        
+        _selectedCard = [card retain];
+        [_selectedCard.view setBackgroundColor:[UIColor greenColor]];
+    }
+}
 
 @end

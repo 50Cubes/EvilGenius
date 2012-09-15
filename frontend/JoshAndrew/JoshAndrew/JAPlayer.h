@@ -26,4 +26,8 @@ typedef enum
 @property (nonatomic, assign) NSString *matchID;
 @property (nonatomic, assign) BOOL matchHasAllPlayers;
 @property (nonatomic, assign) JAPlayerType playerType;
+@property (nonatomic, retain) NSDictionary *matchData;
+@property (nonatomic, retain) NSString *matchAnswer;
+@property (nonatomic, retain) NSString *matchQuestion;
+
 @end

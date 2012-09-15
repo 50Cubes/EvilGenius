@@ -117,10 +117,12 @@
     
     //record current match id
     [[JAPlayer sharedInstance] setMatchID:[data objectForKey:@"match_id"]];
-    
+
+    NSLog(@"hand data %@", data);
     if ( [[data objectForKey:@"play_type"] isEqual:@"judge"] )
     {
         
+        [[JAPlayer sharedInstance] setMatchData:data];
         NSLog(@"hand is judge type");
         [[JAPlayer sharedInstance] setPlayerType:JAPlayerTypeJudge];
         JAJudgeViewController *judgeViewController = [[JAJudgeViewController alloc] initWithHandData:data];
@@ -135,7 +137,6 @@
         JAOratorViewController *oratorViewController = [[JAOratorViewController alloc] initWithData:data];
         [self transitionToView:oratorViewController withCompletionBlock:NULL];
         [oratorViewController release];
-    
     }
     else
     {
@@ -145,13 +146,23 @@
 }
 
 
--(void)showResultsScreenWithData:(NSDictionary*)data
+-(void)showResultsScreenWithScore:(NSString*)playerScore winnerID:(NSString*)theWinnerID answerText:(NSString*)theAnswerText
 {
     NSLog(@"showing results screen");
-    JAResultsViewController *oratorResultsViewController = [[JAResultsViewController alloc] initWithData:data];
+    JAResultsViewController *oratorResultsViewController = [[JAResultsViewController alloc] initWithScore:playerScore winnerID:theWinnerID answerText:theAnswerText];
     [self transitionToView:oratorResultsViewController withCompletionBlock:NULL];
     [oratorResultsViewController release];
 
+}
+
+-(void)showStartScreen
+{
+    
+    JAStartScreen *startScreen = [[JAStartScreen alloc] init];
+    [self transitionToView:startScreen withCompletionBlock:NULL];
+    [startScreen release];
+    
+    [[JAPlayer sharedInstance] setMatchHasAllPlayers:NO];
 }
 
 @end

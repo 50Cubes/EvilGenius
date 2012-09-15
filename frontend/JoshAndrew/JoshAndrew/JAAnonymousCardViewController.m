@@ -15,13 +15,13 @@
 @implementation JAAnonymousCardViewController
 @synthesize answerLabel = _answerLabel;
 
-- (id)init
+- (id)initWithData:(NSDictionary*)aData
 {
     self = [super initWithNibName:@"JAAnonymousCardViewController" bundle:[NSBundle mainBundle]];
     if (self)
     {
         // Custom initialization
-        
+        _data = [aData retain];
     }
     return self;
 }
@@ -42,7 +42,7 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-	return YES;
+    return UIInterfaceOrientationIsLandscape(interfaceOrientation);
 }
 
 - (void)dealloc

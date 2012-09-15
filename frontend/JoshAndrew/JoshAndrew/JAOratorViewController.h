@@ -25,7 +25,14 @@
     JAOratorHandCardViewController *_selectedCard;
     NSDictionary *_readyForJudgementDictionary;
     NSMutableArray *_submittedAnswers;
-
+    BOOL _initializedWaitingOnSubmissionsCards;
+    UIView *_submissionsContentScroller;
+    NSArray *_playerInfo;
+    NSURLConnection *_checkForJudgementDoneConnection;
+    NSMutableData *_checkForJudgementDoneResponseData;
+    NSString *_resultingScoreForCurPlayer;
+    NSString *_winnerID;
+    NSString *_answerText;
 }
 @property (retain, nonatomic) IBOutlet UILabel *instructionText;
 @property (retain, nonatomic) IBOutlet UIButton *submitChoiceButton;

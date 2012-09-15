@@ -592,6 +592,8 @@
 		037F1FF11602E803003545E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jack Wu (27G8KUK9T6)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jack Wu (27G8KUK9T6)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JoshAndrew/JoshAndrew-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -600,6 +602,8 @@
 				);
 				INFOPLIST_FILE = "JoshAndrew copy-Info.plist";
 				PRODUCT_NAME = "JoshAndrew copy";
+				PROVISIONING_PROFILE = "C08E6CEE-201B-4283-947D-055213FEA103";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "C08E6CEE-201B-4283-947D-055213FEA103";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;

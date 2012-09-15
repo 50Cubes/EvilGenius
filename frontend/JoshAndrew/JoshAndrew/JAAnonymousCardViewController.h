@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface JAAnonymousCardViewController : UIViewController
+{
+    
+    NSDictionary *_data;
+}
 @property (retain, nonatomic) IBOutlet UILabel *answerLabel;
-- (id)init;
-
+- (id)initWithData:(NSDictionary*)aData;
 @end

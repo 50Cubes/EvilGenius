@@ -11,12 +11,18 @@
 @interface JAResultsViewController : UIViewController
 {
     
-    NSDictionary *_data;
+//    NSDictionary *_data;
+    NSString *_playerscore;
+    NSString *_winnerID;
+    NSString *_answerTextForOrator;
 }
-@property (retain, nonatomic) IBOutlet UILabel *questionWithAnswer;
+@property (retain, nonatomic) IBOutlet UILabel *question;
+@property (retain, nonatomic) IBOutlet UILabel *answer;
+
 @property (retain, nonatomic) IBOutlet UILabel *winningPlayer;
 @property (retain, nonatomic) IBOutlet UILabel *currentPlayerPostMatchScore;
+- (IBAction)playAgainDidTap:(id)sender;
 
-- (id)initWithData:(NSDictionary*)aData;
+- (id)initWithScore:(NSString*)playerScore winnerID:(NSString*)theWinnerID answerText:(NSString*)theAnswerText;
 
 @end
