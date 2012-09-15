@@ -172,12 +172,19 @@ switch ($_REQUEST['method'])
       }
     }
     
-    if (!$mysqli->query('update player set score=score+.1 where user_id='.$userId))
+    if ($res = $mysqli->query('select score from player where user_id='.$userId))
+    {
+      $row = $res->fetch_assoc();
+      $score = $row['score'] + .1;
+      $mysqli->query('update player set score='.$score.' where user_id='.$userId);
+    }
+    else
     {
       $mysqli->query('insert into player (user_id, score) values ('.$userId.', 1000.1)');
+      $score = 1000.1;
     }
     
-    $response = array('ok' => 'yay!');
+    $response = array('score' => floor($score));
   break;
   case 'PingForJudgment':
     $matchId = $_REQUEST['match_id'];
@@ -195,7 +202,7 @@ switch ($_REQUEST['method'])
       
       $res = $mysqli->query('select score from player where user_id='.$user_id);
       $playerRow = $res->fetch_assoc();
-      $response['judgment'] = array('user_id' => $judgmentInfo[1], 'answer_id' => $judgmentInfo[3], 'answer_text' => $answerRow['text'], 'score' => $playerRow['score']);
+      $response['judgment'] = array('user_id' => $judgmentInfo[1], 'answer_id' => $judgmentInfo[3], 'answer_text' => $answerRow['text'], 'score' => floor($playerRow['score']));
     }
     else
     {
