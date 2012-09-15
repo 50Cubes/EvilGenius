@@ -15,7 +15,12 @@
     NSString *_adLib;
     NSMutableArray *_cards;
     UIView *_scrollerContent;
+    NSURLConnection *_checkForSubmittedCardsConnection;
+    NSMutableData *_checkForSubmittedCardsResponseData;
+    //keys are card id's and values are jaanonymousCard objects
+    NSMutableDictionary *_submittedCards;
 }
+@property (retain, nonatomic) IBOutlet UIButton *submitChoiceButton;
 @property (retain, nonatomic) IBOutlet UILabel *question;
 @property (retain, nonatomic) IBOutlet UIScrollView *answerScroller;
 - (IBAction)sendChoiceDidTap:(id)sender;

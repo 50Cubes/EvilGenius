@@ -15,5 +15,5 @@ typedef void(^TransitionCompletion)(UIViewController *newVC);
 }
 
 -(void)dealHandWithDictionaryData:(NSDictionary*)data;
-
+-(void)showResultsScreenWithData:(NSDictionary*)data;
 @end

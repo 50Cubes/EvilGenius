@@ -7,18 +7,33 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JAOratorHandCardViewController.h"
 
-@interface JAOratorViewController : UIViewController
+@interface JAOratorViewController : UIViewController <JAOratorHandCardViewControllerDelegate, NSURLConnectionDelegate>
 {
     
     NSDictionary *_data;
     NSString *_questionText;
     UIView *_scrollerContent;
     NSMutableArray *_cards;
+    NSURLConnection *_pingForFullMatchConnection;
+    NSURLConnection *_answerAdlibConnection;
+    NSURLConnection *_checkForSubmittedCardsConnection;
+    NSMutableData *_pingForFullMatchResponseData;
+    NSMutableData *_answerAdlibResponseData;
+    NSMutableData *_checkForSubmittedCardsResponseData;
+    JAOratorHandCardViewController *_selectedCard;
+    NSDictionary *_readyForJudgementDictionary;
+    NSMutableArray *_submittedAnswers;
+
 }
+@property (retain, nonatomic) IBOutlet UILabel *instructionText;
+@property (retain, nonatomic) IBOutlet UIButton *submitChoiceButton;
 @property (retain, nonatomic) IBOutlet UILabel *question;
 @property (retain, nonatomic) IBOutlet UIScrollView *scollerOfAnswerCards;
+@property (retain, nonatomic) IBOutlet UIButton *seeResultsButton;
 - (IBAction)submitChoiceDidTap:(id)sender;
+- (IBAction)seeResultsDidTap:(id)sender;
 - (id)initWithData:(NSDictionary*)aData;
 
 @end

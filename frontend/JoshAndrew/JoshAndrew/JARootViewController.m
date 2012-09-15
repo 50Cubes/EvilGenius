@@ -11,6 +11,8 @@
 #import "JAPlayer.h"
 #import "JAJudgeViewController.h"
 #import "JAOratorViewController.h"
+#import "JAResultsViewController.h"
+#import "JAResultsViewController.h"
 
 @interface JARootViewController ()
 
@@ -69,6 +71,9 @@
     _currentViewController = startScreen;
     [startScreen release];
 
+    [[JAPlayer sharedInstance] setMatchHasAllPlayers:NO];
+
+    
 }
 
 - (void)viewDidUnload
@@ -110,10 +115,14 @@
 -(void)dealHandWithDictionaryData:(NSDictionary*)data
 {
     
+    //record current match id
+    [[JAPlayer sharedInstance] setMatchID:[data objectForKey:@"match_id"]];
+    
     if ( [[data objectForKey:@"play_type"] isEqual:@"judge"] )
     {
         
         NSLog(@"hand is judge type");
+        [[JAPlayer sharedInstance] setPlayerType:JAPlayerTypeJudge];
         JAJudgeViewController *judgeViewController = [[JAJudgeViewController alloc] initWithHandData:data];
         [self transitionToView:judgeViewController withCompletionBlock:NULL];
         [judgeViewController release];
@@ -122,6 +131,7 @@
     {
         
         NSLog(@"hand is orator type");
+        [[JAPlayer sharedInstance] setPlayerType:JAPlayerTypeOrator];
         JAOratorViewController *oratorViewController = [[JAOratorViewController alloc] initWithData:data];
         [self transitionToView:oratorViewController withCompletionBlock:NULL];
         [oratorViewController release];
@@ -135,5 +145,13 @@
 }
 
 
+-(void)showResultsScreenWithData:(NSDictionary*)data
+{
+    NSLog(@"showing results screen");
+    JAResultsViewController *oratorResultsViewController = [[JAResultsViewController alloc] initWithData:data];
+    [self transitionToView:oratorResultsViewController withCompletionBlock:NULL];
+    [oratorResultsViewController release];
+
+}
 
 @end

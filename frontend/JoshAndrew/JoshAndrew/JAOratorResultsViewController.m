@@ -1,26 +1,25 @@
 //
-//  JAJudgeChoiceCardViewController.m
+//  JAOratorResultsViewController.m
 //  JoshAndrew
 //
-//  Created by Joshua Bell on 9/13/12.
+//  Created by Joshua Bell on 9/14/12.
 //  Copyright (c) 2012 50cubes. All rights reserved.
 //
 
-#import "JAJudgeChoiceCardViewController.h"
+#import "JAOratorResultsViewController.h"
 
-@interface JAJudgeChoiceCardViewController ()
+@interface JAOratorResultsViewController ()
 
 @end
 
-@implementation JAJudgeChoiceCardViewController
-@synthesize answerText = _answerText;
-@synthesize waitingCover;
+@implementation JAOratorResultsViewController
 
-- (id)init
+- (id)initWithData:(NSDictionary*)aData
 {
-    self = [super initWithNibName:@"JAJudgeChoiceCardViewController" bundle:nil];
+    self = [super initWithNibName:@"JAOratorResultsViewController" bundle:[NSBundle mainBundle]];
     if (self) {
         // Custom initialization
+        _data = [aData retain];
     }
     return self;
 }
@@ -33,8 +32,6 @@
 
 - (void)viewDidUnload
 {
-    [self setAnswerText:nil];
-    [self setWaitingCover:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -45,10 +42,4 @@
     return UIInterfaceOrientationIsLandscape(interfaceOrientation);
 }
 
-
-- (void)dealloc {
-    [_answerText release];
-    [waitingCover release];
-    [super dealloc];
-}
 @end

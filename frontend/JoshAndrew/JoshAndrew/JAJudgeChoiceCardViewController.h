@@ -10,7 +10,8 @@
 
 @interface JAJudgeChoiceCardViewController : UIViewController
 
-@property (nonatomic, assign) BOOL hasAnswered;
+@property (assign, nonatomic) NSString *answerID;
+@property (assign, nonatomic) NSString *userID;
 @property (retain, nonatomic) IBOutlet UILabel *answerText;
 @property (retain, nonatomic) IBOutlet UIView *waitingCover;
 - (id)init;

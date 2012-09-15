@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class JAOratorHandCardViewController;
+@protocol JAOratorHandCardViewControllerDelegate <NSObject>
+
+-(void)didSelectCard:(JAOratorHandCardViewController*)card;
+
+@end
+
 @interface JAOratorHandCardViewController : UIViewController
 {
     
@@ -15,11 +22,15 @@
     NSString *_cardID;
     NSString *_cardText;
     NSString *_cardScore;
+    id<JAOratorHandCardViewControllerDelegate> _delegate;
 }
 
+@property (readonly, nonatomic) NSString *cardID;
+@property (readonly, nonatomic) NSString *cardText;
 @property (retain, nonatomic) IBOutlet UILabel *answerText;
 @property (retain, nonatomic) IBOutlet UILabel *score;
+- (IBAction)cardDidSelect:(id)sender;
 
-- (id)initWithData:(NSDictionary*)data;
+- (id)initWithData:(NSDictionary*)aData delegate:(id<JAOratorHandCardViewControllerDelegate>)theDelegate;
 
 @end
